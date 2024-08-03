@@ -1,0 +1,131 @@
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #1a0346;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-family: 'Playfair Display', serif;
+}
+
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title-saude {
+    font-size: 12px;
+    background-color: rgb(5, 182, 129);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.headline-container {
+    display: flex;
+    flex-direction: column; /* Mantém o layout em coluna padrão para telas pequenas */
+    gap: 20px;
+}
+
+.headline-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+.image-container img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+    flex: 1;
+    max-width: calc(70% - 10px); /* Garante que as imagens não ultrapassem 50% da largura do contêiner, considerando o gap */
+    height: auto;
+    border-radius: 4px;
+}
+
+.text-container {
+    flex: 1;
+}
+
+.text-content {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin: 20px 0;
+    column-count: 2;
+    padding: 0 20px;
+}
+
+.text-content p {
+    font-size: 16px;
+    color: #666;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+@media (max-width: 768px) {
+    header h1, nav a {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .headline-container {
+        flex-direction: column;
+    }
+
+    .text-content {
+        column-count: 1;
+    }
+
+    .search-input, .search-button {
+        width: 100%;
+    }
+}
+
+footer {
+    background-color: #49494d;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,197 @@
+body {
+  font-family: 'Merriweather', serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #1a0346;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-family: 'Playfair Display', serif;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+social-icon:hover {
+  color: #ddd;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #49494d;
+  padding: 10px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 20px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.headline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-text-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.text-container {
+  flex: 2;
+}
+
+.image-container {
+  flex: 3;
+}
+
+.headline-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.text-container h2 {
+  font-size: 24px;
+  font-family: 'Playfair Display', serif;
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  color: #000;
+}
+
+.text-container p {
+  font-size: 16px;
+  color: #000000ab;
+  margin: 0;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-family: 'Playfair Display', serif;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Alinha as notícias secundárias com imagem ao lado do texto */
+.secondary-news {
+  display: flex;
+  gap: 20px;
+}
+
+.secondary-news .news-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+  min-width: 250px; /* Ajusta o tamanho mínimo das notícias */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.secondary-news img {
+  width: 100px; /* Ajusta o tamanho da imagem */
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Estilo das imagens */
+.image-row {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between; /* Garante que as imagens sejam distribuídas uniformemente */
+}
+
+.pro-image {
+  flex: 1; /* Permite que as imagens ocupem espaço igualmente */
+  max-width: calc(33.33% - 20px); /* Calcula a largura máxima considerando a margem */
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+/* Estilos responsivos */
+@media (max-width: 480px) {
+  .text-container h2 {
+    font-size: 18px;
+  }
+
+  .text-container p {
+    font-size: 12px;
+  }
+
+  .secondary-news img {
+    width: 60px; /* Ajusta o tamanho da imagem para telas muito pequenas */
+  }
+}
+@media (max-width: 768px) {
+  .pro-image {
+    max-width: calc(50% - 20px); /* Ajusta para duas imagens lado a lado em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .pro-image {
+    max-width: 100%; /* Ajusta para uma imagem por linha em telas muito pequenas */
+    margin-bottom: 10px; /* Adiciona margem inferior para espaçar as imagens */
+  }
+}
+
+footer {
+  background-color: #49494d;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
