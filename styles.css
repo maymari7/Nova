@@ -14,12 +14,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
 
 header h1 {
   margin: 0;
-  font-size: 32px;
+  font-size: 28px; /* Reduzido de 32px para 28px */
   font-family: 'Playfair Display', serif;
+  line-height: 1.2; /* Ajuste de espaçamento entre linhas */
 }
 
 .social-icons {
@@ -29,31 +31,34 @@ header h1 {
 
 .social-icon {
   color: white;
-  font-size: 24px;
+  font-size: 20px; /* Reduzido de 24px para 20px */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-social-icon:hover {
+.social-icon:hover {
   color: #ddd;
 }
 
 nav {
   display: flex;
   justify-content: space-around;
-  background-color: #49494d;
-  padding: 10px 0;
+  background-color: #1a0346;
+  padding: 3px 0;
+  border: 1px solid white; /* Adiciona uma borda branca ao redor do nav */
+  border-radius: 2px; /* Adiciona bordas arredondadas (opcional) */
 }
+
 
 nav a {
   color: white;
   text-decoration: none;
-  padding: 8px 20px;
+  padding: 0px 20px;
   transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: #555;
+  background-color: #cf0c0cea;
 }
 
 .container {
@@ -103,10 +108,11 @@ nav a:hover {
 }
 
 .text-container p {
-  font-size: 16px;
+  font-size: 14px;
   color: #000000ab;
   margin: 0;
   line-height: 1.6;
+  columns: 2;
 }
 
 a {
@@ -144,16 +150,27 @@ a:hover {
   border-radius: 4px;
 }
 
-/* Estilo das imagens */
-.image-row {
+/* Estilo das propagandas */
+.ads-section {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-between; /* Garante que as imagens sejam distribuídas uniformemente */
+  margin-top: 20px;
 }
 
-.pro-image {
-  flex: 1; /* Permite que as imagens ocupem espaço igualmente */
-  max-width: calc(33.33% - 20px); /* Calcula a largura máxima considerando a margem */
+.ad {
+  flex: 1;
+  min-width: 300px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.ad img {
+  width: 100%;
   height: auto;
   border-radius: 4px;
   border: 1px solid #ddd;
@@ -173,16 +190,10 @@ a:hover {
     width: 60px; /* Ajusta o tamanho da imagem para telas muito pequenas */
   }
 }
-@media (max-width: 768px) {
-  .pro-image {
-    max-width: calc(50% - 20px); /* Ajusta para duas imagens lado a lado em telas menores */
-  }
-}
 
-@media (max-width: 480px) {
-  .pro-image {
-    max-width: 100%; /* Ajusta para uma imagem por linha em telas muito pequenas */
-    margin-bottom: 10px; /* Adiciona margem inferior para espaçar as imagens */
+@media (max-width: 768px) {
+  .ads-section {
+    flex-direction: column;
   }
 }
 
@@ -193,5 +204,4 @@ footer {
   padding: 20px 0;
   position: relative;
   bottom: 0;
-  width: 100%;
-}
+  width: 100%;}
